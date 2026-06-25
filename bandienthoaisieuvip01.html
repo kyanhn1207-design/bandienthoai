@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KA Mobile - iPhone Chính Hãng | Bảo Hành 12 Tháng, Giao Nhanh Toàn Quốc</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kaBlue: '#2563eb',
+                        kaBlueDark: '#1d4ed8',
+                        kaCyan: '#06b6d4',
+                        kaDark: '#0a0f1c',
+                        kaSlate: '#0f172a',
+                    },
+                    fontFamily: {
+                        sans: ['"Be Vietnam Pro"', 'sans-serif'],
+                        display: ['"Space Grotesk"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #1d4ed8; }
+        .glow-text {
+            background: linear-gradient(90deg, #60a5fa, #22d3ee, #60a5fa);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .phone-item-card {
+            transform-style: preserve-3d;
+            will-change: transform;
+            transition: transform 0.15s ease-out, box-shadow 0.3s ease;
+        }
+    </style>
+
+<style>
+#snow-canvas{
+position:fixed;inset:0;pointer-events:none;z-index:9999;
+}
+</style>
+
+</head>
+<body class="font-sans bg-kaDark text-slate-200 flex flex-col min-h-screen">
+
+    <!-- 1. NAVIGATION BAR -->
+    <header class="sticky top-0 z-50 bg-kaDark/90 backdrop-blur-md border-b border-white/5 shadow-lg shadow-black/20 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="#trang-chu" class="flex items-center gap-3 group">
+                    <div class="bg-gradient-to-br from-kaBlue to-kaCyan text-white w-10 h-10 rounded-xl flex items-center justify-center shadow-md shadow-blue-900/30 transform group-hover:scale-105 transition-all duration-300">
+                        <i class=""><img src="áddasdas.jpg" width="193" height="148" alt=""/></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-extrabold tracking-wider text-white block leading-none font-display">kachim SẮT&nbsp;</span>
+                        <span class="text-[10px] font-bold tracking-[0.25em] text-kaCyan">&nbsp;</span>
+                    </div>
+                </a>
+
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="#trang-chu" class="text-sm font-semibold text-slate-300 hover:text-kaCyan transition-colors duration-200">Trang Chủ</a>
+                    <a href="#gioi-thieu" class="text-sm font-semibold text-slate-300 hover:text-kaCyan transition-colors duration-200">Giới Thiệu</a>
+                    <a href="#san-pham" class="text-sm font-semibold text-slate-300 hover:text-kaCyan transition-colors duration-200">Sản Phẩm</a>
+                    <a href="#bao-hanh" class="text-sm font-semibold text-slate-300 hover:text-kaCyan transition-colors duration-200">Bảo Hành &amp; Giao Hàng</a>
+                    <a href="#lien-he" class="text-sm font-semibold text-slate-300 hover:text-kaCyan transition-colors duration-200">Liên Hệ</a>
+                </nav>
+
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="tel:19008888" class="text-sm font-bold text-slate-200 flex items-center gap-2 hover:text-kaCyan transition-colors">
+                        <i class="fa-solid fa-phone-volume text-kaCyan animate-pulse"></i> 0855 640 739
+                    </a>
+                    <a href="#san-pham" class="bg-gradient-to-r from-kaBlue to-kaCyan hover:from-kaBlueDark hover:to-kaBlue text-white text-sm font-bold px-5 py-2.5 rounded-full shadow-md shadow-blue-900/20 hover:shadow-lg transition-all duration-200">
+                        Mua Ngay
+                    </a>
+                </div>
+
+                <div class="flex md:hidden">
+                    <button id="mobile-menu-btn" class="text-slate-200 hover:text-kaCyan p-2" aria-label="Toggle Menu">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-kaSlate border-b border-white/5 px-4 pt-2 pb-6 space-y-3 transition-all duration-300">
+            <a href="#trang-chu" class="mobile-nav-link block px-3 py-2 rounded-lg text-slate-200 font-medium hover:bg-white/5 hover:text-kaCyan">Trang Chủ</a>
+            <a href="#gioi-thieu" class="mobile-nav-link block px-3 py-2 rounded-lg text-slate-200 font-medium hover:bg-white/5 hover:text-kaCyan">Giới Thiệu</a>
+            <a href="#san-pham" class="mobile-nav-link block px-3 py-2 rounded-lg text-slate-200 font-medium hover:bg-white/5 hover:text-kaCyan">Sản Phẩm</a>
+            <a href="#bao-hanh" class="mobile-nav-link block px-3 py-2 rounded-lg text-slate-200 font-medium hover:bg-white/5 hover:text-kaCyan">Bảo Hành &amp; Giao Hàng</a>
+            <a href="#lien-he" class="mobile-nav-link block px-3 py-2 rounded-lg text-slate-200 font-medium hover:bg-white/5 hover:text-kaCyan">Liên Hệ</a>
+            <div class="pt-4 border-t border-white/5 flex flex-col gap-3">
+                <a href="tel:19008888" class="text-center font-bold py-2 text-slate-200 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone-volume text-kaCyan"></i> 0855 640 739
+                </a>
+                <a href="#san-pham" class="text-center bg-gradient-to-r from-kaBlue to-kaCyan text-white font-bold py-2.5 rounded-lg">
+                    Mua Ngay
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section id="trang-chu" class="relative bg-gradient-to-br from-kaDark via-[#0d1426] to-kaDark text-white overflow-hidden py-24 lg:py-32">
+        <div class="absolute top-1/4 right-0 w-96 h-96 bg-kaBlue/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 left-10 w-80 h-80 bg-kaCyan/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full">
+                        <span class="w-2.5 h-2.5 bg-green-400 rounded-full animate-ping"></span>
+                        <span class="text-xs font-semibold text-slate-300 tracking-wide uppercase">iPhone Chính Hãng VN/A - Nguyên Seal</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none text-white font-display">
+                        Đổi Điện Thoại Mới <span class="glow-text">Giao Tận Cửa Trong Ngày</span>
+                    </h1>
+
+                    <p class="text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
+                        KA Mobile cung cấp đầy đủ các dòng iPhone chính hãng mới nhất, cùng dịch vụ thu cũ đổi mới, trả góp 0% và giao hàng hỏa tốc, kiểm tra máy trước khi thanh toán.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#san-pham" class="bg-gradient-to-r from-kaBlue to-kaCyan hover:from-kaBlueDark hover:to-kaBlue text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-blue-900/30 text-center transform hover:-translate-y-0.5 transition-all">
+                            Xem Sản Phẩm <i class="fa-solid fa-circle-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#bao-hanh" class="bg-white/10 hover:bg-white/15 border border-white/20 text-white font-bold px-8 py-4 rounded-xl text-center backdrop-blur-sm transition-all">
+                            Chính Sách Bảo Hành <i class="fa-solid fa-shield-halved ml-2"></i>
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-6 pt-8 border-t border-white/10 max-w-md mx-auto lg:mx-0">
+                        <div>
+                            <span class="block text-3xl font-extrabold text-white font-display">100%</span>
+                            <span class="text-xs text-slate-400 font-medium">Máy Chính Hãng</span>
+                        </div>
+                        <div>
+                            <span class="block text-3xl font-extrabold text-white font-display">2 Giờ</span>
+                            <span class="text-xs text-slate-400 font-medium">Giao Hỏa Tốc</span>
+                        </div>
+                        <div>
+                            <span class="block text-3xl font-extrabold text-white font-display">50k+</span>
+                            <span class="text-xs text-slate-400 font-medium">Khách Tin Dùng</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual Panel / Product Mockup -->
+                <div class="lg:col-span-5 relative flex justify-center">
+                    <div class="absolute -top-10 right-4 sm:right-10 w-32 sm:w-40 opacity-90 pointer-events-none rotate-6">
+                        <img src="images/hero-iphone.png" alt="iPhone" class="w-full h-auto drop-shadow-2xl">
+                    </div>
+                    <div class="bg-kaSlate text-slate-100 rounded-3xl p-8 shadow-2xl border border-white/10 max-w-sm w-full space-y-6 relative rotate-3 hover:rotate-0 transition-transform duration-500">
+                        <div class="flex justify-between items-center border-b border-dashed border-white/10 pb-4">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-mobile-screen text-kaCyan text-xl"></i>
+                                <span class="font-bold text-xs text-slate-400 tracking-wider uppercase">kaSPEC</span>
+                            </div>
+                            <span class="text-xs bg-blue-500/10 text-kaCyan font-bold px-2.5 py-1 rounded-full">Hàng Mới Về</span>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div>
+                                <span class="text-[10px] text-slate-500 font-bold block uppercase tracking-wider">Sản Phẩm Nổi Bật</span>
+                                <span class="text-lg font-bold text-white font-display">iPhone 16 Pro Max</span>
+                            </div>
+                            <div class="bg-white/5 p-4 rounded-xl border border-white/10 text-center">
+                                <span class="text-[10px] text-slate-500 font-bold block uppercase tracking-wider mb-2">Dung Lượng Có Sẵn</span>
+                                <div class="flex justify-center gap-2">
+                                    <span class="px-3 h-10 rounded-full bg-kaBlue text-white font-bold text-sm flex items-center justify-center">256GB</span>
+                                    <span class="px-3 h-10 rounded-full bg-white/10 text-slate-300 font-bold text-sm flex items-center justify-center">512GB</span>
+                                    <span class="px-3 h-10 rounded-full bg-white/10 text-slate-300 font-bold text-sm flex items-center justify-center">1TB</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between items-center pt-4 border-t border-dashed border-white/10">
+                            <div>
+                                <span class="text-xs text-slate-500 block">Giá khởi điểm</span>
+                                <span class="text-lg font-bold text-white font-display">29.990.000đ</span>
+                            </div>
+                            <button onclick="openBookingModal('iPhone 16 Pro Max')" class="bg-kaBlue hover:bg-kaBlueDark text-white text-xs font-bold px-4 py-2.5 rounded-lg transition-colors">
+                                Đặt Mua Nhanh
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. GIỚI THIỆU SECTION -->
+    <section id="gioi-thieu" class="py-24 bg-kaSlate scroll-mt-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <h2 class="text-xs font-bold text-kaCyan uppercase tracking-widest">KA Mobile Uy Tín</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight font-display">Chính Hãng Tạo Nên Thương Hiệu</p>
+                <div class="w-16 h-1 bg-kaBlue mx-auto rounded-full"></div>
+                <p class="text-slate-400 font-light">KA Mobile tự hào là hệ thống bán lẻ iPhone chính hãng, kết nối khách hàng với nguồn hàng Apple chuẩn VN/A trên toàn quốc, đảm bảo an tâm 100%.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold text-white font-display">Dịch Vụ Chuyên Nghiệp Khác Biệt</h3>
+                    <p class="text-slate-400 leading-relaxed font-light">
+                        Chúng tôi ra đời để xóa bỏ hoàn toàn rào cản về thời gian và sự an tâm khi mua điện thoại. Thay vì lo lắng về hàng giả, hàng dựng, bạn hoàn toàn có thể chọn máy, kiểm tra IMEI và nhận hàng ngay tại nhà chỉ qua vài cú chạm.
+                    </p>
+
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-blue-500/10 text-kaCyan flex items-center justify-center">
+                                <i class="fa-solid fa-shield-halved text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Kiểm Tra IMEI Minh Bạch</h4>
+                                <p class="text-sm text-slate-400">Tra cứu IMEI công khai trên hệ thống Apple ngay trước khi thanh toán, đảm bảo máy chính hãng VN/A.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-cyan-500/10 text-kaCyan flex items-center justify-center">
+                                <i class="fa-solid fa-box-archive text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Kho Hàng Đạt Chuẩn Lưu Trữ</h4>
+                                <p class="text-sm text-slate-400">Toàn bộ máy mới được bảo quản trong kho đạt chuẩn nhiệt độ, độ ẩm, nguyên seal cho tới tay khách hàng.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center">
+                                <i class="fa-solid fa-bell text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Hỗ Trợ Kỹ Thuật Tức Thời</h4>
+                                <p class="text-sm text-slate-400">Đội ngũ kỹ thuật hỗ trợ cài đặt, chuyển dữ liệu và bảo hành nhanh chóng 24/7, không quản ngày nghỉ lễ.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4 relative">
+                    <div class="space-y-4">
+                        <div class="bg-gradient-to-br from-blue-500/10 to-cyan-500/10 p-8 rounded-2xl border border-blue-500/20 shadow-sm text-center">
+                            <div class="text-4xl font-extrabold text-kaCyan mb-2 font-display">99.9%</div>
+                            <span class="text-sm font-semibold text-slate-200 block">Khách Hài Lòng</span>
+                            <span class="text-xs text-slate-500 font-light block mt-1">Đánh giá 5 sao từ cộng đồng người mua hàng online.</span>
+                        </div>
+                        <div class="bg-kaDark border border-white/10 text-white p-8 rounded-2xl text-center">
+                            <div class="text-4xl font-extrabold text-kaCyan mb-2 font-display">10+</div>
+                            <span class="text-sm font-semibold text-slate-300 block">Năm Kinh Nghiệm</span>
+                            <span class="text-xs text-slate-500 font-light block mt-1">Hoạt động uy tín và chuyên nghiệp.</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="bg-gradient-to-tr from-kaBlue to-kaCyan text-white p-8 rounded-2xl shadow-xl w-full text-center space-y-4">
+                            <i class="fa-solid fa-award text-4xl text-white"></i>
+                            <h4 class="font-bold text-lg leading-tight font-display">Đại Lý Bán Lẻ Apple Tiêu Biểu</h4>
+                            <p class="text-xs text-white/80 font-light leading-relaxed">Cam kết nguồn gốc rõ ràng, hóa đơn VAT đầy đủ cho mọi đơn hàng.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SẢN PHẨM SECTION -->
+    <section id="san-pham" class="py-24 bg-kaDark scroll-mt-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <h2 class="text-xs font-bold text-kaCyan uppercase tracking-widest">Hệ Thống Phân Phối</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight font-display">Danh Mục iPhone Đang Phân Phối</p>
+                <div class="w-16 h-1 bg-kaBlue mx-auto rounded-full"></div>
+                <p class="text-slate-400 font-light">Đầy đủ các dòng máy mới nhất, cấu hình đa dạng. Đảm bảo 100% chính hãng, hóa đơn minh bạch.</p>
+            </div>
+
+            <div class="flex justify-center gap-4 mb-12 flex-wrap">
+                <button onclick="filterPhones('all')" id="tab-all" class="phone-tab-btn px-6 py-2.5 rounded-full text-sm font-bold bg-kaBlue text-white shadow-md transition-all">
+                    Tất Cả
+                </button>
+                <button onclick="filterPhones('pro')" id="tab-pro" class="phone-tab-btn px-6 py-2.5 rounded-full text-sm font-bold bg-white/5 text-slate-300 hover:bg-white/10 hover:text-white shadow-sm border border-white/10 transition-all">
+                    Dòng Pro
+                </button>
+                <button onclick="filterPhones('standard')" id="tab-standard" class="phone-tab-btn px-6 py-2.5 rounded-full text-sm font-bold bg-white/5 text-slate-300 hover:bg-white/10 hover:text-white shadow-sm border border-white/10 transition-all">
+                    Dòng Tiêu Chuẩn
+                </button>
+            </div>
+
+            <!-- Product Cards Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1: iPhone 16 Pro Max -->
+                <div class="phone-item-card pro bg-kaSlate rounded-2xl border border-white/10 overflow-hidden shadow-sm hover:shadow-lg hover:shadow-blue-900/20 transition-all duration-300">
+                    <div class="h-2 bg-gradient-to-r from-kaBlue to-kaCyan"></div>
+                    <div class="flex justify-center pt-6"><img src="anh ip/16prm.png" width="210" height="200" alt=""/>
+                    </div>
+                    <div class="p-6 space-y-5">
+                        <span class="text-[10px] font-bold text-kaCyan bg-cyan-500/10 px-3 py-1 rounded-full uppercase tracking-wider">Dòng Pro</span>
+                        <div class="space-y-1">
+                            <h3 class="text-xl font-bold text-white font-display">iPhone 16 Pro Max</h3>
+                            <p class="text-sm text-slate-400 font-light">Chip <span class="font-bold text-slate-200">A18 Pro</span>, màn hình 6.9" Super Retina XDR.</p>
+                        </div>
+                        <div class="bg-white/5 p-4 rounded-xl space-y-2">
+                            <div class="flex justify-between text-xs">
+                                <span class="text-slate-500">Giá khởi điểm:</span>
+                                <span class="font-bold text-kaCyan">29.990.000đ</span>
+                            </div>
+                            <div class="flex justify-between text-xs">
+                                <span class="text-slate-500">Tùy chọn dung lượng:</span>
+                                <span class="font-semibold text-slate-300">256GB / 512GB / 1TB</span>
+                            </div>
+                        </div>
+                        <button onclick="openBookingModal('iPhone 16 Pro Max')" class="w-full bg-white/10 hover:bg-kaBlue text-white font-bold py-3 rounded-xl transition-colors duration-200 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-shopping"></i> Chọn Mua Pro Max
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2: iPhone 16 Pro -->
+                <div class="phone-item-card pro bg-kaSlate rounded-2xl border border-white/10 overflow-hidden shadow-sm hover:shadow-lg hover:shadow-blue-900/20 transition-all duration-300">
+                    <div class="h-2 bg-gradient-to-r from-kaBlue to-kaCyan"></div>
+                    <div class="flex justify-center pt-6"><img src="anh ip/iphone-17-pro-max-10-removebg-preview.png" width="270" height="260" alt=""/> </div>
+                    <div class="p-6 space-y-5">
+                        <span class="text-[10px] font-bold text-kaCyan bg-cyan-500/10 px-3 py-1 rounded-full uppercase tracking-wider">Dòng Pro</span>
+                        <div class="space-y-1">
+                            <h3 class="text-xl font-bold text-white font-display">iPhone 17 Pro Max</h3>
+                            <p class="text-sm text-slate-400 font-light">Chip <span class="font-bold text-slate-200">A19 Pro</span>, màn hình 6.3" Super Retina XDR.</p>
+                      </div>
+                        <div class="bg-white/5 p-4 rounded-xl space-y-2">
+                            <div class="flex justify-between text-xs">
+                                <span class="text-slate-500">Giá khởi điểm:</span>
+                                <span class="font-bold text-kaCyan">26.990.000đ</span>
+                            </div>
+                            <div class="flex justify-between text-xs">
+                                <span class="text-slate-500">Tùy chọn dung lượng:</span>
+                                <span class="font-semibold text-slate-300">128GB / 256GB / 512GB</span>
+                            </div>
+                        </div>
+                        <button onclick="openBookingModal('iPhone 16 Pro')" class="w-full bg-white/10 hover:bg-kaBlue text-white font-bold py-3 rounded-xl transition-colors duration-200 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-shopping"></i> Chọn Mua Pro
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 3: iPhone 16 -->
+                <div class="phone-item-card standard bg-kaSlate rounded-2xl border border-white/10 overflow-hidden shadow-sm hover:shadow-lg hover:shadow-blue-900/20 transition-all duration-300">
+                    <div class="h-2 bg-gradient-to-r from-kaBlue to-kaCyan"></div>
+                    <div class="flex justify-center pt-6"><img src="anh ip/man-hinh-iphone-18-pro-max-removebg-preview.png" width="270" height="250" alt=""/> </div>
+                    <div class="p-6 space-y-5">
+                        <span class="text-[10px] font-bold text-kaCyan bg-cyan-500/10 px-3 py-1 rounded-full uppercase tracking-wider">Dòng Tiêu Chuẩn</span>
+                        <div class="space-y-1">
+                            <h3 class="text-xl font-bold text-white font-display">iPhone 18 Pro Max</h3>
+                            <p class="text-sm text-slate-400 font-light">Chip <span class="font-bold text-slate-200">A20</span>, màn hình 6.1" Super Retina XDR.</p>
+                      </div>
+                        <div class="bg-white/5 p-4 rounded-xl space-y-2">
+                            <div class="flex justify-between text-xs">
+                                <span class="text-slate-500">Giá khởi điểm:</span>
+                                <span class="font-bold text-kaCyan">21.990.000đ</span>
+                            </div>
+                            <div class="flex justify-between text-xs">
+                                <span class="text-slate-500">Màu sắc:</span>
+                                <span class="font-semibold text-slate-300">5 màu lựa chọn</span>
+                            </div>
+                        </div>
+                        <button onclick="openBookingModal('iPhone 16')" class="w-full bg-white/10 hover:bg-kaBlue text-white font-bold py-3 rounded-xl transition-colors duration-200 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-shopping"></i> Chọn Mua iPhone 16
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 4: iPhone 16 Plus -->
+                <div class="phone-item-card standard bg-kaSlate rounded-2xl border border-white/10 overflow-hidden shadow-sm hover:shadow-lg hover:shadow-blue-900/20 transition-all duration-300">
+                    <div class="h-2 bg-gradient-to-r from-kaBlue to-kaCyan"></div>
+                    <div class="flex justify-center pt-6"><img src="anh ip/18pls-removebg-preview.png" width="260" height="250" alt=""/> </div>
+                    <div class="p-6 space-y-5">
+                        <span class="text-[10px] font-bold text-kaCyan bg-cyan-500/10 px-3 py-1 rounded-full uppercase tracking-wider">Dòng Tiêu Chuẩn</span>
+                        <div class="space-y-1">
+                            <h3 class="text-xl font-bold text-white font-display">iPhone 18 Plus</h3>
+                            <p class="text-sm text-slate-400 font-light">Chip <span class="font-bold text-slate-200">A20</span>, màn hình 6.7" pin trâu cả ngày.</p>
+                      </div>
+                        <div class="bg-white/5 p-4 rounded-xl space-y-2">
+                            <div class="flex justify-between text-xs">
+                                <span class="text-slate-500">Giá khởi điểm:</span>
+                                <span class="font-bold text-kaCyan">24.990.000đ</span>
+                            </div>
+                            <div class="flex justify-between text-xs">
+                                <span class="text-slate-500">Màu sắc:</span>
+                                <span class="font-semibold text-slate-300">5 màu lựa chọn</span>
+                            </div>
+                        </div>
+                        <button onclick="openBookingModal('iPhone 16 Plus')" class="w-full bg-white/10 hover:bg-kaBlue text-white font-bold py-3 rounded-xl transition-colors duration-200 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-shopping"></i> Chọn Mua Plus
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 5: iPhone 15 -->
+                <div class="phone-item-card standard bg-kaSlate rounded-2xl border border-white/10 overflow-hidden shadow-sm hover:shadow-lg hover:shadow-blue-900/20 transition-all duration-300">
+                    <div class="h-2 bg-gradient-to-r from-kaBlue to-kaCyan"></div>
+                    <div class="flex justify-center pt-6"><img src="nuoc_mam_nam_ngu-removebg-preview.png" width="250" height="230" alt=""/> </div>
+                    <div class="p-6 space-y-5">
+                        <span class="text-[10px] font-bold text-kaCyan bg-cyan-500/10 px-3 py-1 rounded-full uppercase tracking-wider">Giá Tốt</span>
+                        <div class="space-y-1">
+                            <h3 class="text-xl font-bold text-white font-display">iPhone 18</h3>
+                            <p class="text-sm text-slate-400 font-light">Chip <span class="font-bold text-slate-200">A16 Bionic</span>, Dynamic Island.</p>
+                      </div>
+                        <div class="bg-white/5 p-4 rounded-xl space-y-2">
+                            <div class="flex justify-between text-xs">
+                                <span class="text-slate-500">Giá khởi điểm:</span>
+                                <span class="font-bold text-kaCyan">16.990.000đ</span>
+                            </div>
+                            <div class="flex justify-between text-xs">
+                                <span class="text-slate-500">Bảo hành:</span>
+                                <span class="font-semibold text-slate-300">12 tháng chính hãng</span>
+                            </div>
+                        </div>
+                        <button onclick="openBookingModal('iPhone 15')" class="w-full bg-white/10 hover:bg-kaBlue text-white font-bold py-3 rounded-xl transition-colors duration-200 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-shopping"></i> Chọn Mua iPhone 15
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 6: iPhone 14 -->
+                <div class="phone-item-card standard bg-kaSlate rounded-2xl border border-white/10 overflow-hidden shadow-sm hover:shadow-lg hover:shadow-blue-900/20 transition-all duration-300">
+                    <div class="h-2 bg-gradient-to-r from-kaBlue to-kaCyan"></div>
+                    <div class="flex justify-center pt-6"><img src="99999999999999999999999-removebg-preview.png" width="280" height="250" alt=""/> </div>
+                    <div class="p-6 space-y-5">
+                        <span class="text-[10px] font-bold text-kaCyan bg-cyan-500/10 px-3 py-1 rounded-full uppercase tracking-wider">Giá Tốt</span>
+                        <div class="space-y-1">
+                            <h3 class="text-xl font-bold text-white font-display">iPhone 999</h3>
+                            <p class="text-sm text-slate-400 font-light">Chip <span class="font-bold text-slate-200">A15 Bionic</span>, camera kép 12MP.</p>
+                      </div>
+                        <div class="bg-white/5 p-4 rounded-xl space-y-2">
+                            <div class="flex justify-between text-xs">
+                                <span class="text-slate-500">Giá khởi điểm:</span>
+                                <span class="font-bold text-kaCyan">13.990.000đ</span>
+                            </div>
+                            <div class="flex justify-between text-xs">
+                                <span class="text-slate-500">Bảo hành:</span>
+                                <span class="font-semibold text-slate-300">12 tháng chính hãng</span>
+                            </div>
+                        </div>
+                        <button onclick="openBookingModal('iPhone 14')" class="w-full bg-white/10 hover:bg-kaBlue text-white font-bold py-3 rounded-xl transition-colors duration-200 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-shopping"></i> Chọn Mua iPhone 14
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. BẢO HÀNH & GIAO HÀNG SECTION -->
+    <section id="bao-hanh" class="py-24 bg-kaSlate scroll-mt-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <h2 class="text-xs font-bold text-kaCyan uppercase tracking-widest">Phương Thức Giao Nhận</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight font-display">Quy Trình Mua Hàng &amp; Giao Nhanh</p>
+                <div class="w-16 h-1 bg-kaBlue mx-auto rounded-full"></div>
+                <p class="text-slate-400 font-light">Để khách hàng an tâm tuyệt đối khi nhận máy mới, chúng tôi vận hành dịch vụ kiểm tra máy trước khi thanh toán, giao hàng toàn quốc.</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8 relative">
+                <div class="hidden md:block absolute top-[55px] left-[15%] right-[15%] h-[2px] bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border-t border-dashed border-white/10 -z-10"></div>
+
+                <!-- Step 1 -->
+                <div class="flex flex-col items-center text-center space-y-4">
+                    <div class="w-16 h-16 rounded-2xl bg-blue-500/10 text-kaCyan border border-blue-500/20 flex items-center justify-center text-2xl font-bold shadow-sm relative">
+                        <i class="fa-solid fa-mobile-screen-button text-2xl"></i>
+                        <span class="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-kaBlue text-white text-xs flex items-center justify-center font-bold">1</span>
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="font-bold text-white text-lg font-display">Chọn Máy &amp; Đặt Hàng</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed font-light">Chọn dòng máy, dung lượng và màu sắc yêu thích ngay trên trang web.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex flex-col items-center text-center space-y-4">
+                    <div class="w-16 h-16 rounded-2xl bg-cyan-500/10 text-kaCyan border border-cyan-500/20 flex items-center justify-center text-2xl font-bold shadow-sm relative">
+                        <i class="fa-solid fa-barcode text-2xl"></i>
+                        <span class="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-kaBlue text-white text-xs flex items-center justify-center font-bold">2</span>
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="font-bold text-white text-lg font-display">Xác Thực IMEI</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed font-light">Hệ thống gửi ảnh máy thực tế và mã IMEI để khách tra cứu trước khi giao.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex flex-col items-center text-center space-y-4">
+                    <div class="w-16 h-16 rounded-2xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 flex items-center justify-center text-2xl font-bold shadow-sm relative">
+                        <i class="fa-solid fa-truck-fast text-2xl"></i>
+                        <span class="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-kaBlue text-white text-xs flex items-center justify-center font-bold">3</span>
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="font-bold text-white text-lg font-display">Giao Hỏa Tốc</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed font-light">Đóng gói niêm phong, giao shipper nội thành hoặc vận chuyển tỉnh nhanh chóng.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="flex flex-col items-center text-center space-y-4">
+                    <div class="w-16 h-16 rounded-2xl bg-green-500/10 text-green-400 border border-green-500/20 flex items-center justify-center text-2xl font-bold shadow-sm relative">
+                        <i class="fa-solid fa-money-bill-wave text-2xl"></i>
+                        <span class="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-kaBlue text-white text-xs flex items-center justify-center font-bold">4</span>
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="font-bold text-white text-lg font-display">Kiểm Tra &amp; Thanh Toán</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed font-light">Mở hộp kiểm tra máy đúng cấu hình rồi mới thanh toán (COD hoặc chuyển khoản).</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 p-6 sm:p-8 rounded-2xl border border-blue-500/20 flex flex-col md:flex-row items-start gap-4 shadow-sm">
+                <div class="w-12 h-12 rounded-xl bg-kaBlue text-white flex items-center justify-center flex-shrink-0">
+                    <i class="fa-solid fa-circle-info text-xl"></i>
+                </div>
+                <div class="space-y-2">
+                    <h4 class="font-bold text-white">Chính sách bảo hành &amp; đổi trả:</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed font-light">
+                        Mọi sản phẩm đều được bảo hành <strong class="text-slate-200">12 tháng chính hãng Apple</strong> và hỗ trợ <strong class="text-slate-200">đổi trả trong 7 ngày</strong> nếu phát hiện lỗi từ nhà sản xuất. Khách hàng có thể thu cũ đổi mới với mức trợ giá hấp dẫn khi nâng cấp máy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. LIÊN HỆ SECTION -->
+    <section id="lien-he" class="py-24 bg-kaDark scroll-mt-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12">
+                <!-- Left: Form -->
+                <div class="lg:col-span-7 bg-kaSlate p-8 sm:p-10 rounded-3xl border border-white/10 shadow-sm space-y-6">
+                    <div class="space-y-2">
+                        <h3 class="text-2xl font-extrabold text-white tracking-tight font-display">Cần Hỗ Trợ Tư Vấn Chọn Máy?</h3>
+                        <p class="text-sm text-slate-500 font-light">Vui lòng để lại thông tin của bạn bên dưới, đội ngũ tư vấn viên của KA Mobile sẽ liên hệ hỗ trợ trong vòng 5 phút.</p>
+                    </div>
+
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div class="space-y-1">
+                                <label class="text-xs font-bold text-slate-400 uppercase">Họ Và Tên</label>
+                                <input required type="text" placeholder="Nguyễn Văn A" class="w-full px-4 py-3 rounded-xl border border-white/10 bg-white/5 text-slate-100 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-kaBlue focus:border-transparent text-sm transition-all">
+                            </div>
+                            <div class="space-y-1">
+                                <label class="text-xs font-bold text-slate-400 uppercase">Số Điện Thoại</label>
+                                <input required type="tel" placeholder="0909 123 456" class="w-full px-4 py-3 rounded-xl border border-white/10 bg-white/5 text-slate-100 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-kaBlue focus:border-transparent text-sm transition-all">
+                            </div>
+                        </div>
+
+                        <div class="space-y-1">
+                            <label class="text-xs font-bold text-slate-400 uppercase">Nhu Cầu Quan Tâm</label>
+                            <select class="w-full px-4 py-3 rounded-xl border border-white/10 bg-white/5 text-slate-100 focus:outline-none focus:ring-2 focus:ring-kaBlue focus:border-transparent text-sm transition-all">
+                                <option>Mua iPhone mới chính hãng</option>
+                                <option>Thu cũ đổi mới</option>
+                                <option>Trả góp 0% lãi suất</option>
+                                <option>Cần hỗ trợ bảo hành / kỹ thuật</option>
+                            </select>
+                        </div>
+
+                        <div class="space-y-1">
+                            <label class="text-xs font-bold text-slate-400 uppercase">Lời Nhắn / Địa Chỉ Nhận Hàng</label>
+                            <textarea rows="4" placeholder="Nhập địa chỉ giao hàng hoặc dòng máy bạn quan tâm..." class="w-full px-4 py-3 rounded-xl border border-white/10 bg-white/5 text-slate-100 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-kaBlue focus:border-transparent text-sm transition-all"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-gradient-to-r from-kaBlue to-kaCyan hover:from-kaBlueDark hover:to-kaBlue text-white font-bold py-3.5 rounded-xl shadow-md transition-all duration-300">
+                            Gửi Yêu Cầu Tư Vấn <i class="fa-solid fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right: Detailed Info -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="bg-kaSlate text-white p-8 rounded-3xl space-y-6 relative overflow-hidden border border-white/10">
+                        <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-kaCyan/10 rounded-full blur-2xl"></div>
+
+                        <h3 class="text-xl font-bold text-white font-display">Trụ Sở Điều Hành Chính</h3>
+
+                        <div class="space-y-5 relative z-10 text-sm">
+                            <div class="flex gap-3 items-start">
+                                <i class="fa-solid fa-location-dot text-kaCyan text-lg mt-0.5"></i>
+                                <div>
+                                    <span class="block font-bold text-slate-100">Địa Chỉ Trung Tâm:</span>
+                                    <span class="text-slate-400 font-light">142 Đường Nguyễn Văn Linh, Phường Tân Phong, Quận 7, TP. Hồ Chí Minh</span>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-3 items-start">
+                                <i class="fa-solid fa-phone-volume text-kaCyan text-lg mt-0.5"></i>
+                                <div>
+                                    <span class="block font-bold text-slate-100">Số Điện Thoại Hỗ Trợ:</span>
+                                    <span class="text-slate-400 font-light">Hotline: 1900 8888 | Tư vấn Zalo: 0909 123 456</span>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-3 items-start">
+                                <i class="fa-solid fa-envelope text-kaCyan text-lg mt-0.5"></i>
+                                <div>
+                                    <span class="block font-bold text-slate-100">Thư Điện Tử (Email):</span>
+                                    <span class="text-slate-400 font-light">cskh@kamobile.vn</span>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-3 items-start">
+                                <i class="fa-solid fa-clock text-kaCyan text-lg mt-0.5"></i>
+                                <div>
+                                    <span class="block font-bold text-slate-100">Giờ Làm Việc:</span>
+                                    <span class="text-slate-400 font-light">8:00 - 21:00 hàng ngày (Kể cả lễ, tết).</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Virtual Support Agent Profile Card -->
+                    <div class="bg-kaSlate p-6 rounded-3xl border border-white/10 flex items-center gap-4 shadow-sm">
+                        <div class="relative flex-shrink-0">
+                            <div class="w-14 h-14 rounded-full bg-gradient-to-br from-blue-500/20 to-cyan-500/20 text-kaCyan font-black flex items-center justify-center text-xl shadow-inner border-2 border-white/10">
+                                SP
+                            </div>
+                            <span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-green-500 border-2 border-kaSlate"></span>
+                        </div>
+                        <div>
+                            <span class="block text-xs text-slate-500 font-bold uppercase tracking-wider">Hỗ trợ viên trực tuyến</span>
+                            <span class="block font-bold text-slate-100 text-base">Hoàng Lan (Trưởng bộ phận CSKH)</span>
+                            <span class="block text-xs text-slate-500 font-light">Tư vấn chọn máy, trả góp hoặc thông tin giao hàng.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-kaSlate text-white border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-12 gap-8 items-start">
+                <div class="md:col-span-4 space-y-4 text-center md:text-left">
+                  <a href="#trang-chu" class="inline-flex items-center gap-3">
+                  <div class="bg-gradient-to-br from-kaBlue to-kaCyan text-white w-9 h-9 rounded-xl flex items-center justify-center shadow-lg">
+                            <i class="fa-solid fa-mobile-screen-button text-base"></i>
+                      </div>
+                      <span class="text-lg font-bold tracking-wider text-white font-display">KA <span class="text-kaCyan">MOBILE</span></span>
+                  </a>
+                    <p class="text-xs text-slate-500 font-light leading-relaxed">
+                        Hệ thống bán lẻ iPhone chính hãng, thu cũ đổi mới và hỗ trợ kỹ thuật chuyên nghiệp toàn quốc. Cam kết dịch vụ giao hàng an toàn, nhanh chóng tối đa.
+                    </p>
+                </div>
+
+                <div class="md:col-span-4 space-y-4 text-center md:text-left">
+                    <h4 class="text-sm font-extrabold text-white tracking-widest uppercase">Danh Mục Liên Kết</h4>
+                    <div class="grid grid-cols-2 gap-2 text-xs text-slate-500 font-light">
+                        <a href="#trang-chu" class="hover:text-kaCyan transition-colors">Trang Chủ</a>
+                        <a href="#gioi-thieu" class="hover:text-kaCyan transition-colors">Giới Thiệu</a>
+                        <a href="#san-pham" class="hover:text-kaCyan transition-colors">Sản Phẩm</a>
+                        <a href="#bao-hanh" class="hover:text-kaCyan transition-colors">Bảo Hành</a>
+                        <a href="#lien-he" class="hover:text-kaCyan transition-colors">Hỗ Trợ Kỹ Thuật</a>
+                        <a href="#lien-he" class="hover:text-kaCyan transition-colors">Liên Hệ Đặt Mua</a>
+                    </div>
+                </div>
+
+                <div class="md:col-span-4 space-y-4 text-center md:text-left">
+                    <h4 class="text-sm font-extrabold text-white tracking-widest uppercase">Thông Tin Pháp Lý</h4>
+                    <p class="text-xs text-slate-500 font-light leading-relaxed">
+                        KA Mobile cam kết kinh doanh hợp pháp, đầy đủ hóa đơn chứng từ. Sản phẩm chính hãng VN/A, bảo hành theo chính sách Apple Việt Nam.
+                    </p>
+                    <div class="flex justify-center md:justify-start gap-4 text-slate-500 text-lg">
+                        <a href="#" class="hover:text-kaCyan transition-colors"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="hover:text-kaCyan transition-colors"><i class="fa-brands fa-zalo"></i></a>
+                        <a href="#" class="hover:text-kaCyan transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-white/5 text-center text-xs text-slate-600 font-light">
+                <p>&copy; 2026 KA Mobile. Bảo lưu mọi quyền thương mại và pháp lý.</p>
+                <p class="mt-2">Được thiết kế và duy trì bởi phòng công nghệ KA Mobile.</p>
+            </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- WIDGET CHATBOT BÁN HÀNG CÓ TÍNH NĂNG GỬI ẢNH -->
+        <!-- ========================================== -->
+        <div class="fixed bottom-6 right-6 z-[100] flex flex-col items-end">
+
+            <div id="chat-window" class="hidden w-[340px] h-[500px] bg-kaSlate rounded-2xl shadow-2xl border border-white/10 overflow-hidden mb-4 flex-col transition-all duration-300 origin-bottom-right">
+
+                <div class="bg-gradient-to-r from-kaBlue to-kaCyan p-4 text-white flex justify-between items-center shadow-md z-10">
+                    <div class="flex items-center gap-3">
+                        <div class="relative w-8 h-8 bg-white/20 rounded-full flex items-center justify-center border border-white/30">
+                            <i class="fa-solid fa-robot text-sm"></i>
+                            <span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-400 border border-white rounded-full"></span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm leading-tight">Bot Hỗ Trợ KA Mobile</h4>
+                            <span class="text-[10px] text-white/80">Trực tuyến</span>
+                        </div>
+                    </div>
+                    <button id="close-chat-btn" class="text-white/80 hover:text-white transition-colors">
+                        <i class="fa-solid fa-xmark text-lg"></i>
+                    </button>
+                </div>
+
+                <div id="chat-messages" class="flex-1 p-4 overflow-y-auto bg-kaDark space-y-4 scroll-smooth">
+                    <div class="flex gap-2 max-w-[85%]">
+                        <div class="w-8 h-8 rounded-full bg-gradient-to-br from-kaBlue to-kaCyan text-white flex items-center justify-center shrink-0 mt-1 shadow-sm">
+                            <i class="fa-solid fa-robot text-xs"></i>
+                        </div>
+                        <div class="bg-kaSlate p-3 rounded-2xl rounded-tl-none text-sm text-slate-200 shadow-sm border border-white/10">
+                            Chào bạn! Tôi là trợ lý ảo của KA Mobile. Bạn muốn xem máy, gửi ảnh sản phẩm cũ để định giá hay cần hỗ trợ gì ạ?
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-3 bg-kaSlate border-t border-white/10 flex items-end gap-2 relative">
+                    <input type="file" id="chat-image-upload" accept="image/*" class="hidden">
+                    <label for="chat-image-upload" class="cursor-pointer p-2 text-slate-500 hover:text-kaCyan transition-colors" title="Gửi hình ảnh">
+                        <i class="fa-solid fa-image text-xl"></i>
+                    </label>
+
+                    <textarea id="chat-input" rows="1" class="flex-1 bg-white/5 rounded-2xl px-4 py-2.5 text-sm text-slate-200 placeholder:text-slate-500 focus:outline-none focus:ring-1 focus:ring-kaBlue resize-none max-h-24" placeholder="Nhập tin nhắn..."></textarea>
+
+                    <button id="send-chat-btn" class="w-10 h-10 rounded-full bg-kaBlue text-white flex items-center justify-center shrink-0 hover:bg-kaBlueDark transition-colors shadow-md shadow-blue-900/20 disabled:opacity-50">
+                        <i class="fa-solid fa-paper-plane text-sm ml-0.5"></i>
+                    </button>
+                </div>
+            </div>
+
+            <button id="open-chat-btn" class="relative w-14 h-14 bg-gradient-to-r from-kaBlue to-kaCyan text-white rounded-full flex items-center justify-center shadow-xl shadow-blue-900/30 hover:scale-105 transition-transform duration-300">
+                <span class="absolute inline-flex w-full h-full rounded-full bg-kaBlue opacity-40 animate-ping"></span>
+                <i class="fa-solid fa-comment-dots text-2xl relative z-10"></i>
+            </button>
+        </div>
+
+        <script>
+            const chatWindow = document.getElementById('chat-window');
+            const openChatBtn = document.getElementById('open-chat-btn');
+            const closeChatBtn = document.getElementById('close-chat-btn');
+            const chatMessages = document.getElementById('chat-messages');
+            const chatInput = document.getElementById('chat-input');
+            const sendChatBtn = document.getElementById('send-chat-btn');
+            const imageUpload = document.getElementById('chat-image-upload');
+
+            openChatBtn.addEventListener('click', () => {
+                chatWindow.classList.remove('hidden');
+                chatWindow.classList.add('flex');
+                openChatBtn.classList.add('hidden');
+            });
+
+            closeChatBtn.addEventListener('click', () => {
+                chatWindow.classList.add('hidden');
+                chatWindow.classList.remove('flex');
+                openChatBtn.classList.remove('hidden');
+            });
+
+            function appendMessage(content, isUser = true, isImage = false) {
+                const msgDiv = document.createElement('div');
+                msgDiv.className = `flex gap-2 w-full ${isUser ? 'justify-end' : 'justify-start'}`;
+
+                let innerHTML = '';
+
+                if (isUser) {
+                    innerHTML = `
+                        <div class="max-w-[80%] ${isImage ? '' : 'bg-kaBlue text-white p-3 rounded-2xl rounded-tr-none shadow-sm text-sm'}">
+                            ${content}
+                        </div>
+                    `;
+                } else {
+                    innerHTML = `
+                        <div class="w-8 h-8 rounded-full bg-gradient-to-br from-kaBlue to-kaCyan text-white flex items-center justify-center shrink-0 mt-1 shadow-sm">
+                            <i class="fa-solid fa-robot text-xs"></i>
+                        </div>
+                        <div class="bg-kaSlate p-3 rounded-2xl rounded-tl-none text-sm text-slate-200 shadow-sm border border-white/10 max-w-[80%]">
+                            ${content}
+                        </div>
+                    `;
+                }
+
+                msgDiv.innerHTML = innerHTML;
+                chatMessages.appendChild(msgDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+
+            sendChatBtn.addEventListener('click', () => {
+                const text = chatInput.value.trim();
+                if (!text) return;
+
+                appendMessage(text, true);
+                chatInput.value = '';
+
+                setTimeout(() => {
+                    appendMessage("Dạ, hệ thống đã ghi nhận thông tin. Vui lòng để lại số điện thoại hoặc Zalo để nhân viên tư vấn chọn máy phù hợp cho bạn nhé!", false);
+                }, 1000);
+            });
+
+            chatInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    sendChatBtn.click();
+                }
+            });
+
+            imageUpload.addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (!file) return;
+
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    const imgTag = `<img src="${event.target.result}" class="max-w-full rounded-2xl rounded-tr-none border border-white/10 shadow-sm" alt="Uploaded Image">`;
+
+                    appendMessage(imgTag, true, true);
+
+                    imageUpload.value = '';
+
+                    setTimeout(() => {
+                        appendMessage("Cảm ơn bạn đã gửi ảnh. Nhân viên kỹ thuật đang kiểm tra tình trạng máy và sẽ báo giá thu cũ / hỗ trợ ngay.", false);
+                    }, 1500);
+                };
+                reader.readAsDataURL(file);
+            });
+        </script>
+    </footer>
+
+    <!-- INTERACTIVE BOOKING MODAL -->
+    <div id="booking-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+        <div onclick="closeBookingModal()" class="absolute inset-0 bg-kaDark/80 backdrop-blur-sm"></div>
+        <div class="bg-kaSlate rounded-3xl p-6 sm:p-8 max-w-md w-full relative z-10 shadow-2xl border border-white/10 space-y-6 transform transition-all scale-95 duration-300">
+            <div class="flex justify-between items-start">
+                <div>
+                    <h3 class="text-xl font-extrabold text-white tracking-tight font-display">Đăng Ký Đặt Mua iPhone</h3>
+                    <p id="modal-category" class="text-xs text-kaCyan font-bold uppercase tracking-wider mt-1">iPhone 16 Pro Max</p>
+                </div>
+                <button onclick="closeBookingModal()" class="text-slate-500 hover:text-slate-300 p-1">
+                    <i class="fa-solid fa-circle-xmark text-2xl"></i>
+                </button>
+            </div>
+
+            <div class="space-y-4">
+                <div class="space-y-1">
+                    <label class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Họ Và Tên Người Nhận</label>
+                    <input id="modal-name" type="text" placeholder="Nguyễn Văn A" class="w-full px-4 py-3 rounded-xl border border-white/10 bg-white/5 text-slate-100 placeholder:text-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-kaBlue transition-all">
+                </div>
+                <div class="space-y-1">
+                    <label class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Số Điện Thoại Nhận SMS/Zalo</label>
+                    <input id="modal-phone" type="tel" placeholder="0909 123 456" class="w-full px-4 py-3 rounded-xl border border-white/10 bg-white/5 text-slate-100 placeholder:text-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-kaBlue transition-all">
+                </div>
+                <div class="space-y-1">
+                    <label class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Địa Chỉ Giao Hàng</label>
+                    <input id="modal-address" type="text" placeholder="Nhập số nhà, tên đường, tỉnh thành..." class="w-full px-4 py-3 rounded-xl border border-white/10 bg-white/5 text-slate-100 placeholder:text-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-kaBlue transition-all">
+                </div>
+                <div class="space-y-1">
+                    <label class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Dung Lượng / Màu Sắc Muốn Chọn</label>
+                    <input id="modal-numbers" type="text" placeholder="Ví dụ: 256GB - Màu Titan Đen" class="w-full px-4 py-3 rounded-xl border border-white/10 bg-white/5 text-slate-100 placeholder:text-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-kaBlue transition-all">
+                </div>
+
+                <div class="bg-blue-500/10 p-3 rounded-xl text-xs text-slate-300 flex gap-2 items-start">
+                    <i class="fa-solid fa-shield text-kaCyan mt-0.5 flex-shrink-0"></i>
+                    <span>Chúng tôi sẽ liên hệ xác nhận tồn kho trước khi tiến hành đóng gói và giao hàng.</span>
+                </div>
+            </div>
+
+            <button onclick="submitBooking()" class="w-full bg-gradient-to-r from-kaBlue to-kaCyan hover:from-kaBlueDark hover:to-kaBlue text-white font-bold py-3.5 rounded-xl transition-all">
+                Xác Nhận Đặt Mua
+            </button>
+        </div>
+    </div>
+
+    <!-- 7. JAVASCRIPT INTERACTIVE BEHAVIORS -->
+    <script>
+        // Hamburger Menu Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Tab Filtering Logic for Products Section
+        function filterPhones(category) {
+            const tabButtons = document.querySelectorAll('.phone-tab-btn');
+            tabButtons.forEach(btn => {
+                btn.classList.remove('bg-kaBlue', 'text-white', 'shadow-md');
+                btn.classList.add('bg-white/5', 'text-slate-300', 'shadow-sm', 'border', 'border-white/10');
+            });
+
+            const activeBtn = document.getElementById(`tab-${category}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-white/5', 'text-slate-300', 'shadow-sm', 'border', 'border-white/10');
+                activeBtn.classList.add('bg-kaBlue', 'text-white', 'shadow-md');
+            }
+
+            const cards = document.querySelectorAll('.phone-item-card');
+            cards.forEach(card => {
+                if (category === 'all') {
+                    card.classList.remove('hidden');
+                } else if (card.classList.contains(category)) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+
+        // Modal Order Logic
+        const bookingModal = document.getElementById('booking-modal');
+        const modalCategoryText = document.getElementById('modal-category');
+
+        function openBookingModal(categoryName) {
+            modalCategoryText.innerText = categoryName;
+            bookingModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBookingModal() {
+            bookingModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function submitBooking() {
+            const name = document.getElementById('modal-name').value;
+            const phone = document.getElementById('modal-phone').value;
+            const address = document.getElementById('modal-address').value;
+            const numbers = document.getElementById('modal-numbers').value || "theo tư vấn của nhân viên";
+
+            if (!name || !phone || !address) {
+                alert("Vui lòng điền đầy đủ Họ tên, Số điện thoại và Địa chỉ để chúng tôi giao hàng!");
+                return;
+            }
+
+            alert(`🎉 Đặt hàng thành công!\nHệ thống KA Mobile đã ghi nhận đơn đặt hàng của quý khách:\n- Tên người nhận: ${name}\n- Số điện thoại: ${phone}\n- Cấu hình yêu cầu: ${numbers}\n\nNhân viên hỗ trợ sẽ gọi điện xác nhận và gửi ảnh máy thực tế qua Zalo trước khi tiến hành giao hàng.`);
+
+            document.getElementById('modal-name').value = '';
+            document.getElementById('modal-phone').value = '';
+            document.getElementById('modal-address').value = '';
+            document.getElementById('modal-numbers').value = '';
+            closeBookingModal();
+        }
+
+        // Standard Contact Form Submission simulation
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            alert("Cảm ơn quý khách đã gửi thông tin liên hệ! Tư vấn viên của KA Mobile sẽ liên lạc hỗ trợ ngay qua Số điện thoại/Zalo trong thời gian sớm nhất.");
+            document.getElementById('contact-form').reset();
+        }
+
+        // 3D Tilt Hover Effect for Product Cards
+        document.querySelectorAll('.phone-item-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                card.style.transition = 'transform 0.05s ease-out';
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                const rotateY = (x / rect.width - 0.5) * 20;
+                const rotateX = (0.5 - y / rect.height) * 20;
+
+                card.style.transform =
+                    `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transition = 'transform 0.4s ease';
+                card.style.transform =
+                    'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+            });
+        });
+    </script>
+
+<canvas id="snow-canvas"></canvas>
+<script>
+(function(){
+const canvas=document.getElementById('snow-canvas');
+const ctx=canvas.getContext('2d');
+let w,h,flakes=[];
+function resize(){w=canvas.width=window.innerWidth;h=canvas.height=window.innerHeight;}
+window.addEventListener('resize',resize); resize();
+
+let mouse={x:-999,y:-999};
+window.addEventListener('mousemove',e=>{
+ mouse.x=e.clientX; mouse.y=e.clientY;
+ for(let i=0;i<3;i++){
+   flakes.push({x:mouse.x,y:mouse.y,r:Math.random()*4+1,vx:(Math.random()-0.5)*2,vy:Math.random()*2+1,a:1});
+ }
+});
+
+for(let i=0;i<80;i++){
+ flakes.push({x:Math.random()*w,y:Math.random()*h,r:Math.random()*3+1,vx:(Math.random()-0.5),vy:Math.random()*1.5+0.5,a:1});
+}
+
+function anim(){
+ ctx.clearRect(0,0,w,h);
+ flakes.forEach(f=>{
+   f.x+=f.vx; f.y+=f.vy; f.a-=0.001;
+   if(f.y>h){f.y=-10;f.x=Math.random()*w;f.a=1;}
+   ctx.beginPath();
+   ctx.arc(f.x,f.y,f.r,0,Math.PI*2);
+   ctx.fillStyle='rgba(255,255,255,'+Math.max(0.2,f.a)+')';
+   ctx.fill();
+ });
+ flakes=flakes.slice(-300);
+ requestAnimationFrame(anim);
+}
+anim();
+})();
+</script>
+
+</body>
+</html>
